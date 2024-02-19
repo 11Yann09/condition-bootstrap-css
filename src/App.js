@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Button } from "react-bootstrap";
+import Result from "./components/Game";
 
 function App() {
+  const customBtn = {
+    bacgroundColor: "grey",
+    border: "none",
+    color: "black",
+    fontSize: "19px",
+    padding: "15px 30px",
+    textAlign: "center",
+    textDecoration: "none",
+    borderRadius: "7px",
+    display: "block",
+    margin: "16px auto",
+  };
+  const sayHello = () => alert("Hello World !");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Result />
+
+      <Button variant="warning" onClick={sayHello} style={customBtn}>
+        Say Hello !
+      </Button>
+    </Container>
   );
 }
 
